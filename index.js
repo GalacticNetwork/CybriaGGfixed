@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-const nggUrl = 'https://newalgebra.com/';
+const nggUrl = 'https://mathsspot.com/';
 
 const proxy = createProxyMiddleware({
   target: nggUrl,
@@ -22,7 +22,7 @@ const proxy = createProxyMiddleware({
 
 app.use('/', proxy);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 1243;
 app.listen(port, () => {
   console.log(`CybriaGG is running on port ${port}`);
 });
